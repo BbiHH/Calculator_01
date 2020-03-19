@@ -51,9 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\No_rz43_CalcualtorLib\No_rz43_CalcualtorLib.csproj">
+    <ProjectReference Include="..\No_rz43_CalcualtorLib\CalcualtorLib.csproj">
       <Project>{bd7f9196-1c93-43e0-a466-b516af12aec7}</Project>
-      <Name>No_rz43_CalcualtorLib</Name>
+      <Name>CalcualtorLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

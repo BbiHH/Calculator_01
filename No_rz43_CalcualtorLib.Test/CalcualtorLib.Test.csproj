@@ -46,6 +46,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DivTest.cs" />
+    <Compile Include="MulTest.cs" />
+    <Compile Include="SubTest.cs" />
     <Compile Include="AddTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\No_rz43_CalcualtorLib\No_rz43_CalcualtorLib.csproj">
+    <ProjectReference Include="..\No_rz43_CalcualtorLib\CalcualtorLib.csproj">
       <Project>{bd7f9196-1c93-43e0-a466-b516af12aec7}</Project>
-      <Name>No_rz43_CalcualtorLib</Name>
+      <Name>CalcualtorLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

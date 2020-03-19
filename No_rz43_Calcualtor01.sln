@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No_rz43_CalClient", "No_rz43_Calcualtor01\No_rz43_CalClient.csproj", "{9D8350D4-6D14-49FD-A52C-87D5E344EEA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalClient", "No_rz43_Calcualtor01\CalClient.csproj", "{9D8350D4-6D14-49FD-A52C-87D5E344EEA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No_rz43_CalcualtorLib", "No_rz43_CalcualtorLib\No_rz43_CalcualtorLib.csproj", "{BD7F9196-1C93-43E0-A466-B516AF12AEC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcualtorLib", "No_rz43_CalcualtorLib\CalcualtorLib.csproj", "{BD7F9196-1C93-43E0-A466-B516AF12AEC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "No_rz43_CalcualtorLib.Test", "No_rz43_CalcualtorLib.Test\No_rz43_CalcualtorLib.Test.csproj", "{9B8E89A8-ED6B-4812-89D9-8B6DBE711273}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcualtorLib.Test", "No_rz43_CalcualtorLib.Test\CalcualtorLib.Test.csproj", "{9B8E89A8-ED6B-4812-89D9-8B6DBE711273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
