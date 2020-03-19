@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcualtorLib", "No_rz43_Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcualtorLib.Test", "No_rz43_CalcualtorLib.Test\CalcualtorLib.Test.csproj", "{9B8E89A8-ED6B-4812-89D9-8B6DBE711273}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcualtorUI", "CalcualtorUI\CalcualtorUI.csproj", "{C9777D9D-78AB-4224-85A4-D713B29CCCCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9B8E89A8-ED6B-4812-89D9-8B6DBE711273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B8E89A8-ED6B-4812-89D9-8B6DBE711273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B8E89A8-ED6B-4812-89D9-8B6DBE711273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9777D9D-78AB-4224-85A4-D713B29CCCCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9777D9D-78AB-4224-85A4-D713B29CCCCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9777D9D-78AB-4224-85A4-D713B29CCCCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9777D9D-78AB-4224-85A4-D713B29CCCCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

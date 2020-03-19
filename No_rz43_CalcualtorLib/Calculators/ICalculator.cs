@@ -8,6 +8,6 @@ namespace No_rz43_CalcualtorLib.Calculators
 {
     public interface ICalculator
     {
-        int Calcualtor(int x,int y);
+        double Calcualtor(double x, double y);
     }
 }
