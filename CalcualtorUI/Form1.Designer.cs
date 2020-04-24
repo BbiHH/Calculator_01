@@ -52,6 +52,11 @@
             this.tb_out = new System.Windows.Forms.TextBox();
             this.tb_in = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.写日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.读取日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Nag
@@ -347,13 +352,48 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "标准";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.日志ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(527, 28);
+            this.menuStrip1.TabIndex = 27;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 日志ToolStripMenuItem
+            // 
+            this.日志ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.写日志ToolStripMenuItem,
+            this.读取日志ToolStripMenuItem});
+            this.日志ToolStripMenuItem.Name = "日志ToolStripMenuItem";
+            this.日志ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.日志ToolStripMenuItem.Text = "日志";
+            this.日志ToolStripMenuItem.Click += new System.EventHandler(this.Form1_Load);
+            // 
+            // 写日志ToolStripMenuItem
+            // 
+            this.写日志ToolStripMenuItem.Name = "写日志ToolStripMenuItem";
+            this.写日志ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.写日志ToolStripMenuItem.Text = "写入日志";
+            this.写日志ToolStripMenuItem.Click += new System.EventHandler(this.日志ToolStripMenuItem_Click);
+            // 
+            // 读取日志ToolStripMenuItem
+            // 
+            this.读取日志ToolStripMenuItem.Name = "读取日志ToolStripMenuItem";
+            this.读取日志ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.读取日志ToolStripMenuItem.Text = "读取日志";
+            this.读取日志ToolStripMenuItem.Click += new System.EventHandler(this.读取日志ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(527, 581);
+            this.ClientSize = new System.Drawing.Size(527, 590);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_in);
             this.Controls.Add(this.tb_out);
@@ -377,13 +417,18 @@
             this.Controls.Add(this.btn_dot);
             this.Controls.Add(this.btn_return);
             this.Controls.Add(this.btn_Nag);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "简单计算器";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +459,10 @@
         private System.Windows.Forms.TextBox tb_out;
         private System.Windows.Forms.TextBox tb_in;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 日志ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 写日志ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 读取日志ToolStripMenuItem;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using No_rz43_CalcualtorLib.Calculators;
+﻿using CalcualtorLog;
+using No_rz43_CalcualtorLib.Calculators;
 using No_rz43_CalcualtorLib.Factorys;
 using System;
 using System.Collections.Generic;
@@ -20,12 +21,16 @@ namespace CalcualtorUI
         private double dataX;
 
         private double dataY;
+        private string op;
+        private double result;
         private ICalculator cal;
+        private ILog log;
         private Boolean FinishFlag = false;
 
-        public Form1()
+        public Form1(ILog log)
         {
             InitializeComponent();
+            this.log = log;
         }
 
         private void ZeroCheck()
@@ -100,6 +105,7 @@ namespace CalcualtorUI
             //利用配置文件管理工具配置文件
             Configuration conf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             string factoryname = conf.AppSettings.Settings[((Button)sender).Text].Value;
+            op = ((Button)sender).Text;
             //用反射机制
             //当前程序集
             //Type type = Type.GetType(factoryname);
@@ -114,7 +120,7 @@ namespace CalcualtorUI
         private void btnReturn_Click(object sender, EventArgs e)
         {
             dataY = double.Parse(tb_in.Text);
-            var result = cal.Calcualtor(dataX, dataY);
+            result = cal.Calcualtor(dataX, dataY);
             tb_in.ForeColor = Color.Red;
             tb_in.Text = result.ToString();
             if (dataY == 0)
@@ -123,6 +129,30 @@ namespace CalcualtorUI
             }
             tb_out.Text += "=";
             FinishFlag = true;
+        }
+
+        private void 日志ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //构建日志
+            string contents = String.Format("{0} => {1}{2}{3}={4}\n",
+                DateTime.Now.ToString(),
+                dataX,
+                op,
+                dataY,
+                result
+                );
+            //LogFile log = new LogFile();
+            log.WriteLog(contents);
+        }
+
+        private void 读取日志ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 fm = new Form2(log);
+            fm.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
         }
     }
 }
